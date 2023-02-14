@@ -1,0 +1,35 @@
+kind: Cluster
+apiVersion: clusterregistry.k8s.io/v1alpha1
+metadata:
+  name: gke-practice
+  labels:
+    environment: cloud
+    location: asia-east1-a
+---
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: gke-practice
+spec:
+  selector:
+    matchLabels:
+      environment: cloud
+      location: asia-east1-a
+---
+kind: Cluster
+apiVersion: clusterregistry.k8s.io/v1alpha1
+metadata:
+  name: op-practice
+  labels:
+    environment: onpremise
+    location: cloudaz
+---
+kind: ClusterSelector
+apiVersion: configmanagement.gke.io/v1
+metadata:
+  name: op-practice
+spec:
+  selector:
+    matchLabels:
+      environment: onpremise
+      location: cloudaz
