@@ -27,7 +27,7 @@ spec:
         - name: LOG_LEVEL
           value: info
         - name: BANK_NAME
-          value: Bank of Anthos
+          value: Bank of Anthos on GCP
         - name: DEFAULT_USERNAME
           valueFrom:
             configMapKeyRef:
